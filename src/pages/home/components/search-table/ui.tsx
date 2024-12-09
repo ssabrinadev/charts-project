@@ -1,3 +1,4 @@
+import { SearchIcon } from '@icons';
 import {
   Card,
   Input,
@@ -12,13 +13,19 @@ import {
   TableHeader,
   TableRow,
 } from '@ui';
-import { SearchIcon } from 'lucide-react';
 
 export const SearchTable = () => {
   return (
-    <Card title="Заголовок таблицы" header={
-      <Input className="w-[150px] mr-2" placeholder="Поиск" icon={<SearchIcon size={15} className="text-[#F26C33]" />} />
-    }>
+    <Card
+      title="Заголовок таблицы"
+      header={
+        <Input
+          className="w-[150px] mr-2"
+          placeholder="Поиск"
+          icon={<SearchIcon />}
+        />
+      }
+    >
       <Table className="border rounded-lg mt-2">
         <TableHeader>
           <TableRow>

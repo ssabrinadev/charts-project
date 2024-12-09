@@ -24,7 +24,7 @@ export const SimpleTable = () => {
       <div className="flex items-center gap-1 text-sm my-5">
         <span>Show</span>
         <DropdownMenu>
-          <DropdownMenuTrigger className="bg-[#FFA041] rounded-full flex justify-end self-baseline px-2">
+          <DropdownMenuTrigger className="bg-orange-100 rounded-full flex justify-end self-baseline px-2">
             <span>{showEntities}</span>
           </DropdownMenuTrigger>
           <DropdownMenuContent>

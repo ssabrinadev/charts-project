@@ -44,7 +44,7 @@ const labelData = [
   { color: COLORS[0], label: 'САЙТЫ СМИ' },
   { color: COLORS[1], label: 'ТЕЛЕГРАМ' },
   { color: COLORS[2], label: 'YOUTUBE' },
-]
+];
 
 export const PieChartSection = () => {
   return (

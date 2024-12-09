@@ -23,8 +23,13 @@ export const Card: FC<TCardProps> = ({
   }, [onAction]);
 
   return (
-    <div className="px-5 py-3.5 rounded-xl bg-white relative shadow mb-2.5">
-      <header className={cn('flex items-center', titleCenter ? '' : 'justify-between')}>
+    <div className="px-5 py-3.5 rounded-[43px] bg-white relative shadow mb-2.5">
+      <header
+        className={cn(
+          'flex items-center',
+          titleCenter ? '' : 'justify-between',
+        )}
+      >
         <h1
           className={cn('text-2xl font-bold flex-1', {
             'self-center text-center': titleCenter,
