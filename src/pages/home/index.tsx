@@ -1,4 +1,9 @@
-import { LineChartSection, PieChartSection } from './components';
+import {
+  LineChartSection,
+  PieChartSection,
+  SearchTable,
+  SimpleTable,
+} from './components';
 
 export const HomePage = () => {
   return (
@@ -6,7 +11,9 @@ export const HomePage = () => {
       <div className="grid sm:grid-cols-2 gap-5">
         <LineChartSection />
         <PieChartSection />
+        <SimpleTable />
       </div>
+      <SearchTable />
     </main>
   );
 };
