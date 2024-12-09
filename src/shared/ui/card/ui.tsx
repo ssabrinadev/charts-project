@@ -11,6 +11,7 @@ import { TCardProps } from './types';
 
 export const Card: FC<TCardProps> = ({
   children,
+  header,
   titleCenter,
   title,
   onAction,
@@ -31,9 +32,10 @@ export const Card: FC<TCardProps> = ({
         >
           {title}
         </h1>
+        {header}
         <DropdownMenu>
           <DropdownMenuTrigger
-            className="bg-transparent flex justify-end self-baseline"
+            className="bg-transparent flex justify-end"
             onClick={actionHandler}
           >
             <ActionMenuIcon />

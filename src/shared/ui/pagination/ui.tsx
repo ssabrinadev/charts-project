@@ -1,7 +1,7 @@
 import { cn } from '@libs';
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
 import * as React from 'react';
-import { ButtonProps, buttonVariants } from '@ui';
+import { TButtonProps, buttonVariants } from '@ui';
 
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
   <nav
@@ -29,13 +29,13 @@ const PaginationItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentProps<'li'>
 >(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn('', className)} {...props} />
+  <li ref={ref} className={cn('border border-[#F26C33] rounded-md', className)} {...props} />
 ));
 PaginationItem.displayName = 'PaginationItem';
 
 type PaginationLinkProps = {
   isActive?: boolean;
-} & Pick<ButtonProps, 'size'> &
+} & Pick<TButtonProps, 'size'> &
   React.ComponentProps<'a'>;
 
 const PaginationLink = ({
@@ -51,6 +51,8 @@ const PaginationLink = ({
         variant: isActive ? 'outline' : 'ghost',
         size,
       }),
+      'border-none rounded-md',
+      isActive ? 'bg-[#FFA041]' : 'hover:bg-accent',
       className,
     )}
     {...props}
